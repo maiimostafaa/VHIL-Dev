@@ -38,6 +38,7 @@ public class NPCChatter : MonoBehaviour
     void Start()
     {
         Debug.Log("[NPCChatter] Start() called");
+        Debug.Log(apiKey);
         history.Clear();
         history.Add(new Message(Role.System, systemPrompt));
         if (npcBubbleText)
@@ -79,7 +80,7 @@ public class NPCChatter : MonoBehaviour
             Debug.Log("[NPCChatter] Empty text, returning early");
             return;
         }
-
+        history.Add(new Message(Role.User, text));
         Debug.Log($"[NPCChatter] Processing user input: {text}");
 
         responseBuilder.Clear();
@@ -96,7 +97,7 @@ public class NPCChatter : MonoBehaviour
         // Set talking state BEFORE response begins
         Debug.Log("[NPCChatter] Starting response - setting isTalking to true");
         SetTalkingState(true, "SendMessageToNPC - before streaming starts");
-
+        Debug.Log("About to send message");
         var response = await api.ChatEndpoint.StreamCompletionAsync(
             request,
             async partial =>
