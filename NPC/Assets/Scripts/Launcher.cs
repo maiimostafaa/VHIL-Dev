@@ -25,11 +25,22 @@ public class Launcher : MonoBehaviourPunCallbacks
     }
 
     public override void OnJoinedRoom()
-{
-    PhotonNetwork.Instantiate(
-        "VRPlayer",
-        Vector3.zero,
-        Quaternion.identity
-    );
-}
+    {
+        Debug.Log("Joined room: " + PhotonNetwork.CurrentRoom.Name);
+        PhotonNetwork.Instantiate(
+            "NetworkedPlayer",
+            Vector3.zero,
+            Quaternion.identity
+        );
+    }
+
+    public override void OnDisconnected(DisconnectCause cause)
+    {
+        Debug.LogWarning("Disconnected from Photon: " + cause);
+    }
+
+    public override void OnJoinRoomFailed(short returnCode, string message)
+    {
+        Debug.LogError("Failed to join room: " + message);
+    }
 }

@@ -10,6 +10,7 @@ Library: C:\Users\Stanford VHIL\Documents\GitHub\Research\NPC\Temp\BurstOutput\t
 --target-framework=NetFramework
 --generate-link-xml=Temp\burst.link.xml
 --temp-folder=C:\Users\Stanford VHIL\Documents\GitHub\Research\NPC\Temp\Burst
+--debug=Full
 --key-folder=C:/Program Files/Unity/Hub/Editor/6000.2.9f1/Editor/Data/PlaybackEngines/AndroidPlayer
 --decode-folder=C:\Users\Stanford VHIL\Documents\GitHub\Research\NPC\Library\Burst
 --output=C:\Users\Stanford VHIL\Documents\GitHub\Research\NPC\Temp\BurstOutput\tempburstlibs\arm64-v8a\lib_burst_generated
@@ -111,6 +112,7 @@ Library: C:\Users\Stanford VHIL\Documents\GitHub\Research\NPC\Temp\BurstOutput\t
 --float-mode=Fast
 --generate-link-xml=Temp\burst.link.xml
 --temp-folder=C:\Users\Stanford VHIL\Documents\GitHub\Research\NPC\Temp\Burst
+--debug=Full
 --key-folder=C:/Program Files/Unity/Hub/Editor/6000.2.9f1/Editor/Data/PlaybackEngines/AndroidPlayer
 --decode-folder=C:\Users\Stanford VHIL\Documents\GitHub\Research\NPC\Library\Burst
 --output=C:\Users\Stanford VHIL\Documents\GitHub\Research\NPC\Temp\BurstOutput\tempburstlibs\arm64-v8a\lib_burst_generated
